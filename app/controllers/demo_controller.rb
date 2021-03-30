@@ -4,6 +4,7 @@ class DemoController < ApplicationController
     def index
       render('index')
     end
+     # this demo
   
     def hello
       @array = [1,2,3,4,5,6]
