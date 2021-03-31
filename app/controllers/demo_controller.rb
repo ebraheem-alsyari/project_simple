@@ -7,7 +7,7 @@ class DemoController < ApplicationController
      # this demo
   
     def hello
-      @array = [1,2,3,4,5,6,7]
+      @array = [1,2,3,4,5,6,7,8]
       @id = params['id']
       @page = params[:page]
       render('hello')

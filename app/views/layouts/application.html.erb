@@ -1,15 +1,36 @@
 <!DOCTYPE html>
 <html>
   <head>
+      <title>SimpleCms: <%= @page_title || "Admin Area" %></title>
+      <%= stylesheet_link_tag('admin', media: 'all') %>
+    </head>
+    <body>
+    <!-- Header -->
+    <header>
+      <h1>Simple CMS Admin</h1>
+    </header>
+#
     <title>Mypro</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag('application', media: 'all')%>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
     <%= yield %>
+
+
+
+
+        <!-- Footer -->
+    <footer>Copyright &copy; Lynda.com</footer>
+    </div>
   </body>
 </html>
+
+
+
+
+
