@@ -97,8 +97,8 @@ header {
 #header h1 {}
 
 footer {
-  background: $light_brown url('footer_gradient.png') repeat-y 0 0;
-  color: white;
+  background: $light_brown image_url('footer_gradient.png') repeat-y 0 0;
+  color: rgba(255, 255, 255, 0.884);
   text-align: center;
   padding: 15px;
   h1 {

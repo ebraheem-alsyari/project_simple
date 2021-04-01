@@ -1,6 +1,8 @@
 class PostsController < ApplicationController
+  layout 'admin'
   before_action :set_post, only: [:show, :edit, :update, :destroy]
    
+
 
 
   #this is my project
