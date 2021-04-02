@@ -12,7 +12,7 @@ class SubjectsController < ApplicationController
   end
 
 
-
+          
   def new
     @subject = Subject.new
     @subject_count = Subject.count + 1
