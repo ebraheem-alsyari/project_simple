@@ -12,6 +12,10 @@ class Subject < ApplicationRecord
   
 
     validates_presence_of :name
+    validates_length_of :name, :maximum => 255
+    # validates_presence_of vs. validates_lenght_of :minimum => 1
+    # different error messages: "can't be blank" or "is too short"
+    # validates_lenght_of allws strings with only spaces!
 end
 
 
