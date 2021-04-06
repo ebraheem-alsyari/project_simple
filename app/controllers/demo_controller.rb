@@ -1,16 +1,13 @@
 class DemoController < ApplicationController
     layout 'application'
-  
+    layout 'admin'
     def index
       render('index')
     end
      # this demo
   
     def hello
-      @array = [1,2,3,4,5,6,7,8]
-      @id = params['id']
-      @page = params[:page]
-      render('hello')
+      render('login')
     end
   
     def other_hello

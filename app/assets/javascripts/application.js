@@ -15,3 +15,9 @@
 // require turbolinks
 // require_tree .
 //= require demo
+
+// // If you are using `import` syntax
+// import '@client-side-validations/client-side-validations'
+
+// // If you are using `require` syntax
+// require('@client-side-validations/client-side-validations')

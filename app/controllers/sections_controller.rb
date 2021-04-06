@@ -1,5 +1,5 @@
 class SectionsController < ApplicationController
-
+  before_action :confirm_logged_in
   layout 'admin'
   def index
     @sections = Section.sorted
