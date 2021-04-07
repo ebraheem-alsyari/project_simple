@@ -20,6 +20,7 @@ class AccessController < ApplicationController
     if params[:username].present? && params[:password].present?
       found_user = AdminUser.where(:username => params[:username]).second
       found_user = AdminUser.where(:username => params[:username]).first
+      found_user = AdminUser.where(:username => params[:username])
       
       if found_user
         authorized_user = found_user.authenticate(params[:password])

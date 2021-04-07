@@ -78,4 +78,3 @@ class AdminUsersController < ApplicationController
     )
   end
 end
-
