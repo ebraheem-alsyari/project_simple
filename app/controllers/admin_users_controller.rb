@@ -2,7 +2,7 @@ class AdminUsersController < ApplicationController
 
   layout 'admin'
 
-  before_action :confirm_logged_in
+  # before_action :confirm_logged_in
 
   def index
     @admin_users = AdminUser.sorted
@@ -26,6 +26,7 @@ class AdminUsersController < ApplicationController
   def update
     @admin_user = AdminUser.new(admin_user_params)
     if @admin_user.save
+    logger.debug("*** Testing the logger. ***")
       redirect_to admin_users_path, notice: 'Admin user created successfully.'
     else
       render action: 'edit'
@@ -74,7 +75,6 @@ class AdminUsersController < ApplicationController
       :email,
       :username,
       :password,
-      :password_confirmation
     )
   end
 end
