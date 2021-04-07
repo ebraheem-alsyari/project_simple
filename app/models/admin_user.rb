@@ -21,8 +21,10 @@ validates :email, presence: true,
                   length: { maximum: 100 },
                   format: VALID_EMAIL_REGEX,
                   confirmation: true
+validates :password, presence: true,
+                       length: { maximum: 25 }
 
-validate :username_is_allowed
+# validate :username_is_allowed
 
 scope :sorted, lambda { order('last_name ASC', 'first_name ASC') }
 
@@ -34,7 +36,7 @@ end
 
 private
 
-def username_is_allowed
-  errors.add(:username, 'has been restricted from use.') if FORBIDDEN_USERNAME.include?(username)
-end
+  # def username_is_allowed
+  #   errors.add(:username, 'has been restricted from use.') if FORBIDDEN_USERNAME.include?(username)
+  # end
 end

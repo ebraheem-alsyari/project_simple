@@ -1,17 +1,23 @@
 Rails.application.routes.draw do
   
     
-  post 'admin_users/new'
-  get 'admin_users/index'
-  get 'admin_users/new'
-  get 'admin_users/edit'
-  get 'admin_users/delete'
+  # post 'admin_users/new'
+  # get 'admin_users/index'
+  # get 'admin_users/new'
+  # get 'admin_users/edit'
+  # get 'admin_users/delete'
   resources :subjects do
     member do
       get :delete
     end
   end
 
+
+  resources :admin_users, :except => [:show] do
+    member do
+      get :delete
+    end
+  end
   
   get 'admin', :to => 'access#menu'
   get 'access/menu'
@@ -20,6 +26,9 @@ Rails.application.routes.draw do
 
     post 'access/attempt_login'
     get 'access/logout'
+
+
+
   resources :subjects do
     member do
       get :delete

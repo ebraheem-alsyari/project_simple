@@ -1,4 +1,6 @@
-<%= error_messages_for(f.object) %>
+<%
+=begin%>
+ <%= error_messages_for(f.object) %>
 
 
 
@@ -27,4 +29,6 @@
 <div class="field">
   <%= f.label :password %><br>
   <%= f.password_field :password %>
-</div>
+</div> 
+<%
+=end%>

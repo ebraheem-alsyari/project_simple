@@ -1,16 +1,40 @@
 
 
 
-<%= link_to("<< Back to List", admin_users_index_path, :class => 'back-link') %>
+<%= link_to("<< Back to List", admin_users_path, :class => 'back-link') %>
 
 <div class="admin_users new">
   <h2>Create Admin_User</h2>
 
-<%= form_for(:subject, :url => admin_users_new_path, :method => 'post') do |f| %>
+<%= form_for(@admin_user) do |f| %>
 
 
-<%= render(:partial => 'form', :locals => {:f => f}) %>
+<table summary="Admin User">
 
+        <div class="field">
+        <%= f.label :first_name %><br>
+        <%= f.text_field :first_name %>
+        </div>
+
+        <div class="field">
+        <%= f.label :last_name %><br>
+        <%= f.text_field :last_name %>
+        </div>
+
+        <div class="field">
+        <%= f.label :email %><br>
+        <%= f.text_field :email %>
+        </div>
+
+        <div class="field">
+        <%= f.label :username %><br>
+        <%= f.text_field :username %>
+        </div>
+
+        <div class="field">
+        <%= label_tag(:password) %><br>
+        <%= password_field_tag(:password) %>
+        </div>
 
     <div class="form-buttons">
       <%= f.submit("Create AdminUser") %>
